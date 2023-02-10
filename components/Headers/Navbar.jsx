@@ -27,7 +27,7 @@ function Navbar() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          background: "rgba(0,0,0,0.4)",
+          background: "radial-gradient(circle, rgba(46,46,46,1) 0%, rgba(37,37,37,0.5) 0%, rgba(10,10,10,0.6) 64%)",
           backdropFilter: "blur(5px)",
           position: "fixed",
           zIndex: 100,
