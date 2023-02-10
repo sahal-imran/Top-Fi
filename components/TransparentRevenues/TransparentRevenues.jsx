@@ -9,16 +9,17 @@ import NetworkLockedIcon from "@mui/icons-material/NetworkLocked";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import { Zoom } from "react-awesome-reveal";
 
+
 function TransparentRevenues() {
   return (
     <Box
       sx={{
         width: "100%",
-        background: "black",
+        background: "radial-gradient(circle, rgba(46,46,46,1) 0%, rgba(37,37,37,1) 22%, rgba(10,10,10,1) 64%)",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        py: { md: 0, xs: 4 },
+        py: { md: 10, xs: 4 },
       }}
     >
       <Container
@@ -48,7 +49,7 @@ function TransparentRevenues() {
             p: 5,
           }}
         >
-          <Zoom cascade>
+          <Zoom triggerOnce cascade>
             <Image
               src={"/toplogo.d60b3afd.gif"}
               width={300}
@@ -121,15 +122,16 @@ function TransparentRevenues() {
                         p: 2,
                       }}
                     >
-                      <Zoom>
-                        {/* <Image
+                      <Zoom triggerOnce >
+                        {
+                          index === 2 ? item.Ico : <Image
                           src={item.Ico}
                           width={54}
                           height={54}
                           objectFit="contain"
                           alt=""
-                        /> */}
-                        {item.Ico}
+                        />
+                        }
                         <Typography
                           sx={{
                             textAlign: "center",
@@ -173,23 +175,23 @@ export default TransparentRevenues;
 
 const Cards = [
   {
-    Ico: <MonetizationOnIcon sx={{ color: "#D9C256", fontSize: "45px" }} />,
-    Title: "Top Price",
-    Price: "$ 28.83",
+    Ico: "/svg/Twitter.svg",
+    Title: "Twitter",
+    Price: "20k+",
   },
   {
-    Ico: <CurrencyBitcoinIcon sx={{ color: "#D9C256", fontSize: "45px" }} />,
-    Title: "Market Cap",
-    Price: "$ 202,150",
+    Ico: "/svg/Discord.svg",
+    Title: "Discord",
+    Price: "8.5k",
   },
   {
-    Ico: <NetworkLockedIcon sx={{ color: "#D9C256", fontSize: "45px" }} />,
-    Title: "TVL",
-    Price: "$ 124,124",
+    Ico: <AccountBalanceIcon sx={{color:"white",fontSize:"55px"}} />,
+    Title: "pre-sale",
+    Price: "$250k+",
   },
   {
-    Ico: <AccountBalanceIcon sx={{ color: "#D9C256", fontSize: "45px" }} />,
-    Title: "Treasury Balance",
-    Price: "$ 119,685",
+    Ico: "",
+    Title: "",
+    Price: "",
   },
 ];

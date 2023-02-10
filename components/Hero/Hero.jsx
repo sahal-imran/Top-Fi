@@ -13,7 +13,7 @@ function Hero() {
       id="Home"
       sx={{
         width: "100%",
-        background: "black",
+        background: "radial-gradient(circle, rgba(46,46,46,1) 0%, rgba(37,37,37,1) 22%, rgba(10,10,10,1) 64%)",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -31,7 +31,7 @@ function Hero() {
           pb: { md: "unset", xs: 12 },
         }}
       >
-        <Slide direction="up">
+        <Slide triggerOnce direction="up">
           <Typography
             sx={{
               maxWidth: { md: "40rem", xs: "100%" },

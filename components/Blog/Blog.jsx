@@ -15,6 +15,7 @@ function Blog() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        background:"radial-gradient(circle, rgba(46,46,46,1) 0%, rgba(37,37,37,1) 22%, rgba(10,10,10,1) 64%)"
       }}
     >
       <Container
@@ -53,7 +54,7 @@ function Blog() {
                         p: 4,
                       }}
                     >
-                      <Zoom>
+                      <Zoom triggerOnce >
                         <Image
                           src={item.icon}
                           width={84}
@@ -111,7 +112,7 @@ function Blog() {
                   {/* left Box */}
                   <Box
                     sx={{
-                      width: { md: "40%", xs: "100%" },
+                      width: { md: "50%", xs: "100%" },
                       height: "100%",
                       display: "flex",
                       justifyContent: "center",
@@ -120,7 +121,7 @@ function Blog() {
                       px: 5,
                     }}
                   >
-                    <Zoom>
+                    <Zoom triggerOnce >
                       <Typography
                         sx={{
                           fontFamily: "Inter",
@@ -141,7 +142,7 @@ function Blog() {
                         sx={{
                           width: "300px",
                           paddingY: { md: "1.4rem", xs: "1.3rem" },
-                          background: "black",
+                          background: "linear-gradient(180deg,#D9C256,rgba(159,114,12,1))",
                           color: "white",
                           borderRadius: ".8rem",
                           fontFamily: "Inter",
@@ -151,7 +152,7 @@ function Blog() {
                           mt: 4,
                           whiteSpace: "noWrap",
                           "&:hover": {
-                            backgroundColor: "black",
+                            background: "linear-gradient(180deg,#D9C256,rgba(159,114,12,1))",
                           },
                         }}
                       >
@@ -162,7 +163,7 @@ function Blog() {
                   {/* Right Box */}
                   <Box
                     sx={{
-                      width: { md: "60%", xs: "100%" },
+                      width: { md: "50%", xs: "100%" },
                       height: { md: "510px", sm: "350px", xs: "400px" },
                       pt: { sm: 3.5, xs: 3 },
                       pl: { sm: 0, xs: 2 },
@@ -174,14 +175,18 @@ function Blog() {
                         position: "relative",
                         width: "100%",
                         height: "100%",
+                        display:"flex",
+                        justifyContent:"center",
+                        alignItems:"center"
                       }}
                     >
                       <Slide
+                      triggerOnce
                         direction="right"
-                        style={{ width: "100%", height: "100%" }}
+                        style={{ width: "500px", height: "500px" }}
                       >
                         <Image
-                          src={"/Png/BlogDesktop.png"}
+                          src={"/toplogo.d60b3afd.gif"}
                           layout="fill"
                           objectFit="fill"
                           alt=""

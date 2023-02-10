@@ -15,6 +15,7 @@ function Community() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        background:"radial-gradient(circle, rgba(46,46,46,1) 0%, rgba(37,37,37,1) 22%, rgba(10,10,10,1) 64%)"
       }}
     >
       <Container
@@ -35,7 +36,7 @@ function Community() {
             mt: { md: 0, xs: 10 },
           }}
         >
-          <Zoom>
+          <Zoom triggerOnce >
             <Typography
               sx={{
                 width: "100%",
@@ -72,7 +73,7 @@ function Community() {
               {Communit_Links.map((item, index) => {
                 return (
                   <Grid key={index} item lg={4} md={6} xs={12}>
-                    <Zoom>
+                    <Zoom triggerOnce >
                       <AnchorLink
                         href={item.href}
                         target="_blank"

@@ -16,6 +16,7 @@ function Deposit() {
         alignItems: "center",
         minHeight: "100vh",
         py: { md: 0, xs: 8 },
+        background:"radial-gradient(circle, rgba(46,46,46,1) 0%, rgba(37,37,37,1) 22%, rgba(10,10,10,1) 64%)"
       }}
     >
       <Container
@@ -67,7 +68,7 @@ function Deposit() {
                         boxShadow: "inset 0 0 20px #D9C256",
                       }}
                     >
-                      <Zoom>
+                      <Zoom triggerOnce >
                         <Image
                           src={item.icon}
                           width={105}
@@ -163,7 +164,7 @@ function Deposit() {
                 p: 4,
               }}
             >
-              <Zoom>
+              <Zoom triggerOnce >
                 <Typography
                   sx={{
                     fontFamily: "Inter",

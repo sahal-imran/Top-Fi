@@ -15,6 +15,7 @@ function InvestAndGovern() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        background:"radial-gradient(circle, rgba(46,46,46,1) 0%, rgba(37,37,37,1) 22%, rgba(10,10,10,1) 64%)",
         pt: { md: 0, xs: 10 },
       }}
     >
@@ -54,7 +55,7 @@ function InvestAndGovern() {
               p: { md: 5, xs: 4 },
             }}
           >
-            <Zoom>
+            <Zoom triggerOnce >
             <Typography
               sx={{
                 fontFamily: "Inter",
