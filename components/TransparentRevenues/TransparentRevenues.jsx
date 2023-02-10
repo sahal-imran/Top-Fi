@@ -3,11 +3,11 @@ import Grid from "@mui/material/Grid";
 import { Box, Container } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import { Zoom } from "react-reveal";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import CurrencyBitcoinIcon from "@mui/icons-material/CurrencyBitcoin";
 import NetworkLockedIcon from "@mui/icons-material/NetworkLocked";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import { Zoom } from "react-awesome-reveal";
 
 function TransparentRevenues() {
   return (
@@ -71,7 +71,8 @@ function TransparentRevenues() {
               <br />
               Top Fi!
             </Typography>
-            {/* <Typography
+          </Zoom>
+          {/* <Typography
               sx={{
                 textAlign: "center",
                 fontFamily: "Inter",
@@ -88,7 +89,6 @@ function TransparentRevenues() {
               allocate treasury funds to the most promising projects at an early
               stage to capture the best rewards for our investors.
             </Typography> */}
-          </Zoom>
         </Box>
         {/* left */}
         <Box
@@ -121,7 +121,7 @@ function TransparentRevenues() {
                         p: 2,
                       }}
                     >
-                      <Zoom cascade>
+                      <Zoom>
                         {/* <Image
                           src={item.Ico}
                           width={54}

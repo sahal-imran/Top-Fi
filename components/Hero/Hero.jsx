@@ -4,8 +4,8 @@ import AnchorLink from "@mui/material/Link";
 import Link from "next/link";
 import Image from "next/image";
 import Typography from "@mui/material/Typography";
-import Fade from "react-reveal/Fade";
 import { Button } from "@mui/material";
+import { Slide } from "react-awesome-reveal";
 
 function Hero() {
   return (
@@ -31,7 +31,7 @@ function Hero() {
           pb: { md: "unset", xs: 12 },
         }}
       >
-        <Fade bottom cascade>
+        <Slide direction="up">
           <Typography
             sx={{
               maxWidth: { md: "40rem", xs: "100%" },
@@ -46,8 +46,6 @@ function Hero() {
           >
             Venture Investments & Incubation
           </Typography>
-        </Fade>
-        <Fade bottom delay={500} cascade>
           <Typography
             sx={{
               maxWidth: "62rem",
@@ -66,15 +64,12 @@ function Hero() {
             projects and strategies and deploys a in-house development team for
             project incubation.
           </Typography>
-        </Fade>
-        <Fade bottom delay={800} cascade>
           <Button
             variant="contained"
             sx={{
               px: "6.5rem",
               py: "1.2rem",
-              background:
-              "linear-gradient(180deg,#D9C256,rgba(159,114,12,1))",
+              background: "linear-gradient(180deg,#D9C256,rgba(159,114,12,1))",
               color: "black",
               borderRadius: ".8rem",
               fontFamily: "Inter",
@@ -84,13 +79,13 @@ function Hero() {
               fontSize: "1.2rem",
               "&:hover": {
                 background:
-              "linear-gradient(180deg,#D9C256,rgba(159,114,12,1))",
+                  "linear-gradient(180deg,#D9C256,rgba(159,114,12,1))",
               },
             }}
           >
             Enter App
           </Button>
-        </Fade>
+        </Slide>
         {/* <Box
             sx={{
               position: "relative",

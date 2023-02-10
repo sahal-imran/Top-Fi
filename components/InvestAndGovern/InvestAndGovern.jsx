@@ -2,9 +2,9 @@ import React from "react";
 import { Box, Container } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import { Zoom } from "react-reveal";
-import Fade from "react-reveal/Fade";
 import { Button } from "@mui/material";
+import { Zoom } from "react-awesome-reveal";
+
 
 function InvestAndGovern() {
   return (
@@ -38,7 +38,6 @@ function InvestAndGovern() {
             borderRadius: "1.3rem",
             overflow: "hidden",
             height: "100%",
-            mb: { md: 0, xs: 4 },
             overflow: "hidden",
             boxShadow: "inset 0 0 20px #D9C256",
           }}
@@ -55,6 +54,7 @@ function InvestAndGovern() {
               p: { md: 5, xs: 4 },
             }}
           >
+            <Zoom>
             <Typography
               sx={{
                 fontFamily: "Inter",
@@ -87,7 +87,7 @@ function InvestAndGovern() {
             <Button
               variant="contained"
               sx={{
-                px: "6.5rem",
+                px: {md:"6.5rem",xs:"4rem"},
                 py: "1.2rem",
                 background:
                   "linear-gradient(180deg,#D9C256,rgba(159,114,12,1))",
@@ -106,11 +106,12 @@ function InvestAndGovern() {
             >
               Enter Airdrop
             </Button>
+          </Zoom>
           </Box>
           <Box
             sx={{
               width: { md: "40%", xs: "100%" },
-              height: { md: "100%", xs: "300px" },
+              height: { md: "100%", xs: "0" },
               display: "flex",
               justifyContent: "center",
               alignItems: "center",

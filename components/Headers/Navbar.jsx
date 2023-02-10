@@ -211,8 +211,8 @@ function Navbar() {
             {/* Logo */}
             <Image
               alt=""
-              src={"/Logo.svg"}
-              width={160}
+              src={"/TOP Token 100x100.png"}
+              width={60}
               height={60}
               objectFit="fill"
             />
@@ -224,212 +224,100 @@ function Navbar() {
               size={20}
             />
           </Box>
-          <AnchorLink
-            sx={{
-              display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "center",
-              textDecoration: "none",
-              mt: 5,
-              borderBottom: "1px solid white ",
-              pb: 2,
-            }}
-          >
-            <RocketLaunchIcon
-              sx={{ color: "white", fontSize: "28px", mr: 2 }}
-            />
-            <Typography
-              sx={{
-                color: "white",
-                fontFamily: "Inter",
-                fontWeight: 600,
-                fontSize: "18px",
-              }}
-            >
-              Roadmap
-            </Typography>
-            <Box sx={{ position: "absolute", right: "15px" }}>
-              <Image
-                src={"/svg/ArrowUp.svg"}
-                width={38}
-                height={38}
-                objectFit="fill"
-                alt=""
-              />
-            </Box>
-          </AnchorLink>
-          <AnchorLink
-            sx={{
-              display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "center",
-              textDecoration: "none",
-              mt: 5,
-              borderBottom: "1px solid white ",
-              pb: 2,
-            }}
-          >
-            <FileCopyIcon sx={{ color: "white", fontSize: "28px", mr: 2 }} />
-            <Typography
-              sx={{
-                color: "white",
-                fontFamily: "Inter",
-                fontWeight: 600,
-                fontSize: "18px",
-                mr: 25,
-              }}
-            >
-              Docs
-            </Typography>
-            <Box sx={{ position: "absolute", right: "15px" }}>
-              <Image
-                src={"/svg/ArrowUp.svg"}
-                width={38}
-                height={38}
-                objectFit="fill"
-                alt=""
-              />
-            </Box>
-          </AnchorLink>
-          <AnchorLink
-            sx={{
-              display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "center",
-              textDecoration: "none",
-              mt: 5,
-              borderBottom: "1px solid white ",
-              mb: 6,
-              pb: 2,
-            }}
-          >
-            <CurrencyExchangeIcon
-              sx={{ color: "white", fontSize: "28px", mr: 2 }}
-            />
-            <Typography
-              sx={{
-                color: "white",
-                fontFamily: "Inter",
-                fontWeight: 600,
-                fontSize: "18px",
-                mr: 25,
-              }}
-            >
-              Trade
-            </Typography>
-            <Box sx={{ position: "absolute", right: "15px" }}>
-              <Image
-                src={"/svg/ArrowUp.svg"}
-                width={38}
-                height={38}
-                objectFit="fill"
-                alt=""
-              />
-            </Box>
-          </AnchorLink>
-
-          <Button
-            sx={{
-              width: "100%",
-              p: 3,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              textDecoration: "none",
-              color: "white",
-              borderRadius: "1.5rem",
-              border: "2px solid white",
-            }}
-          >
-            <Image
-              src={"/svg/Trade.svg"}
-              width={48}
-              height={49}
-              objectFit="fill"
-              alt=""
-            />
-            <Typography
-              sx={{
-                color: "rgb(255, 170, 39)",
-                fontSize: "1.2rem",
-                fontWeight: 600,
-                textTransform: "capitalize",
-                fontFamily: "Inter",
-                letterSpacing: "1px",
-                my: 1.5,
-              }}
-            >
-              Try Metavault.Trade
-            </Typography>
-            <Typography
-              sx={{
-                color: "white",
-                fontSize: "14px",
-                fontFamily: "Inter",
-                fontWeight: 500,
-                textTransform: "none",
-                textAlign: "left",
-              }}
-            >
-              Trade top cryptocurrencies with up to 30x leverage directly from
-              your private wallet.
-            </Typography>
-          </Button>
-          {/* Footer */}
           <Box
             sx={{
               width: "100%",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              position: "absolute",
-              bottom: "4rem",
+              flexDirection: "column",
+              mt: 4,
             }}
           >
-            <AnchorLink
-              sx={{ mr: 8, cursor: "pointer", width: "30px", height: "30px" }}
-            >
-              <Image
-                src={"/svg/Telegram.svg"}
-                width={30}
-                height={30}
-                objectFit="fill"
-                alt=""
-              />
-            </AnchorLink>
-            <AnchorLink
-              sx={{ mr: 8, cursor: "pointer", width: "30px", height: "30px" }}
-            >
-              <Image
-                src={"/svg/Twitter.svg"}
-                width={30}
-                height={30}
-                objectFit="fill"
-                alt=""
-              />
-            </AnchorLink>
-            <AnchorLink
-              sx={{ cursor: "pointer", mr: 8, width: "30px", height: "30px" }}
-            >
-              <Image
-                src={"/svg/Discord.svg"}
-                width={30}
-                height={30}
-                objectFit="fill"
-                alt=""
-              />
-            </AnchorLink>
-            <AnchorLink
-              sx={{ mr: 3.8, cursor: "pointer", width: "30px", height: "30px" }}
-            >
-              <Image
-                src={"/svg/Github.svg"}
-                width={30}
-                height={30}
-                objectFit="fill"
-                alt=""
-              />
-            </AnchorLink>
+            {Links.map((item, index) => {
+              return index === 0 ? (
+                <Box
+                  key={index}
+                  sx={{
+                    width: "90%",
+                    height: "50px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "end",
+                    borderBottom: "1px solid white",
+                    pb: 1,
+                  }}
+                >
+                  <Link
+                    onClick={() => setOpen(false)}
+                    activeClass="active"
+                    to="Home"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    duration={1000}
+                    style={{
+                      fontFamily: "Inter",
+                      fontSize: "18px",
+                      lineHeight: "26px",
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {item.Name}
+                  </Link>
+                  <Image
+                    src={"/svg/ArrowUp.svg"}
+                    width={30}
+                    height={30}
+                    objectFit="contain"
+                    alt=""
+                  />
+                </Box>
+              ) : (
+                <Box
+                  key={index}
+                  sx={{
+                    width: "90%",
+                    height: "50px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "end",
+                    borderBottom: "1px solid white",
+                    pb: 1,
+                  }}
+                >
+                  <AnchorLink
+                    onClick={() => setOpen(false)}
+                    href={item.To}
+                    target={"_blank"}
+                    sx={{
+                      fontFamily: "Inter",
+                      fontSize: "18px",
+                      lineHeight: "26px",
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      cursor: "pointer",
+                      textDecoration: "none",
+                    }}
+                  >
+                    {item.Name}
+                  </AnchorLink>
+                  <Image
+                    src={"/svg/ArrowUp.svg"}
+                    width={30}
+                    height={30}
+                    objectFit="contain"
+                    alt=""
+                  />
+                </Box>
+              );
+            })}
           </Box>
         </Drawer>
       </Box>

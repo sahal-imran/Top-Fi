@@ -4,7 +4,7 @@ import { Box, Container } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import AnchorLink from "@mui/material/Link";
-import { Zoom } from "react-reveal";
+import { Zoom } from "react-awesome-reveal";
 
 function Deposit() {
   return (
@@ -67,7 +67,7 @@ function Deposit() {
                         boxShadow: "inset 0 0 20px #D9C256",
                       }}
                     >
-                      <Zoom cascade>
+                      <Zoom>
                         <Image
                           src={item.icon}
                           width={105}
@@ -131,12 +131,13 @@ function Deposit() {
               borderRadius: "1.3rem",
               height: "630px",
               boxShadow: "inset 0 0 20px #D9C256",
+              overflow: "hidden",
             }}
           >
             <Box
               sx={{
                 width: "100%",
-                height: "60%",
+                height: { md: "60%", xs: "50%" },
                 display: "flex",
                 justifyContent: "start",
                 alignItems: "center",
@@ -148,28 +149,29 @@ function Deposit() {
                 layout="fill"
                 objectFit="contain"
                 alt=""
-              ></Image>
+              />
             </Box>
-            <Zoom cascade>
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "40%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "start",
-                  alignItems: "center",
-                  mt: { md: 0, xs: -5 },
-                }}
-              >
+            <Box
+              sx={{
+                width: "100%",
+                height: { md: "40%", xs: "50%" },
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                mt: { md: 0, xs: -5 },
+                p: 4,
+              }}
+            >
+              <Zoom>
                 <Typography
                   sx={{
                     fontFamily: "Inter",
                     lineHeight: { md: "45.99px", xs: "37px" },
                     fontSize: { md: "2.2rem", xs: "1.8rem" },
                     fontWeight: 600,
-                    pl: { md: 0, xs: 3 },
                     color: "white",
+                    textAlign: "center",
                   }}
                 >
                   Depositing on Arbitrum Network
@@ -183,8 +185,8 @@ function Deposit() {
                     color: "white",
                     mt: 2,
                     textAlign: { md: "center", xs: "left" },
-                    mb: { md: -2, xs: 2 },
-                    pl: { md: 0, xs: 3 },
+                    mb: { md: -5, xs: 0 },
+                    textAlign: "center",
                   }}
                 >
                   You can deposit and redeem against treasury assets using our
@@ -204,8 +206,8 @@ function Deposit() {
                     alt=""
                   ></Image>
                 </Box>
-              </Box>
-            </Zoom>
+              </Zoom>
+            </Box>
           </Box>
         </Box>
       </Container>

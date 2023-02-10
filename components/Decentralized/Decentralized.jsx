@@ -3,7 +3,6 @@ import { Box, Container } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import AnchorLink from "@mui/material/Link";
-import { Zoom } from "react-reveal";
 
 function Decentralized() {
   return (
@@ -42,7 +41,6 @@ function Decentralized() {
               width: { md: "50%", xs: "100%" },
             }}
           >
-            <Zoom cascade >
             <Typography
               sx={{
                 fontFamily: "Inter",
@@ -55,7 +53,6 @@ function Decentralized() {
             >
               Decentralized, Secure & Reliable
             </Typography>
-            </Zoom>
           </Box>
           {/* Right Box */}
           <Box
@@ -69,6 +66,7 @@ function Decentralized() {
               src={"/Png/decentralized.png"}
               layout="fill"
               objectFit="contain"
+              alt=""
             ></Image>
           </Box>
         </Box>

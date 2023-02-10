@@ -3,10 +3,8 @@ import Grid from "@mui/material/Grid";
 import { Box, Container } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import { Button } from "@mui/material";
+import { Zoom, Slide } from "react-awesome-reveal";
 import AnchorLink from "@mui/material/Link";
-import Zoom from "react-reveal/Zoom";
-import Fade from "react-reveal/Fade";
 
 function Community() {
   return (
@@ -37,7 +35,7 @@ function Community() {
             mt: { md: 0, xs: 10 },
           }}
         >
-          <Zoom cascade>
+          <Zoom>
             <Typography
               sx={{
                 width: "100%",
@@ -74,8 +72,10 @@ function Community() {
               {Communit_Links.map((item, index) => {
                 return (
                   <Grid key={index} item lg={4} md={6} xs={12}>
-                    <Fade bottom cascade>
+                    <Zoom>
                       <AnchorLink
+                        href={item.href}
+                        target="_blank"
                         sx={{
                           height: "90px",
                           display: "flex",
@@ -88,6 +88,11 @@ function Community() {
                           background: "hsla(0,0%,100%,.15)",
                           p: 1,
                           mb: { md: 0, xs: 3 },
+                          transition: "all 0.3s ease",
+                          "&:hover": {
+                            background:
+                              "linear-gradient(180deg,#D9C256,rgba(159,114,12,1))",
+                          },
                         }}
                       >
                         <Box
@@ -103,6 +108,7 @@ function Community() {
                             width={35}
                             height={35}
                             objectFit="contain"
+                            alt=""
                           />
                           <Typography
                             sx={{
@@ -121,14 +127,14 @@ function Community() {
                           width={30}
                           height={30}
                           objectFit="contain"
+                          alt=""
                         />
                       </AnchorLink>
-                    </Fade>
+                    </Zoom>
                   </Grid>
                 );
               })}
             </Grid>
-            <Fade bottom cascade >
             <Typography
               sx={{
                 fontFamily: "Inter",
@@ -140,9 +146,8 @@ function Community() {
                 pb: 6,
               }}
             >
-              © 2022 Metavault
+              © 2023 Top Fi
             </Typography>
-            </Fade>
           </Box>
         </Box>
       </Container>
@@ -155,31 +160,37 @@ const Communit_Links = [
     icon: "/svg/Telegram.svg",
     type: "Telegram",
     arrow: "/svg/ArrowUp.svg",
+    href: "https://t.me/topfiofficial",
   },
   {
     icon: "/svg/Twitter.svg",
-    type: "Telegram",
+    type: "Twitter",
     arrow: "/svg/ArrowUp.svg",
+    href: "https://twitter.com/top_fi_tweets",
   },
   {
     icon: "/svg/CDiscord.svg",
-    type: "Telegram",
+    type: "Discord",
     arrow: "/svg/ArrowUp.svg",
+    href: "https://discord.gg/topfi",
   },
   {
     icon: "/svg/CMedium.svg",
-    type: "Telegram",
+    type: "Medium",
     arrow: "/svg/ArrowUp.svg",
+    href: "https://medium.com/@topfi",
   },
   {
     icon: "/svg/github.svg",
-    type: "Telegram",
+    type: "GitHub",
     arrow: "/svg/ArrowUp.svg",
+    href: "",
   },
   {
     icon: "/svg/CGitBook.svg",
-    type: "Telegram",
+    type: "GitBook",
     arrow: "/svg/ArrowUp.svg",
+    href: "",
   },
 ];
 export default Community;

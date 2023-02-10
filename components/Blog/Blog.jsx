@@ -5,8 +5,7 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import { Button } from "@mui/material";
 import { Link } from "react-scroll";
-import Zoom from "react-reveal/Zoom";
-import Fade from "react-reveal/Fade";
+import { Zoom, Slide } from "react-awesome-reveal";
 
 function Blog() {
   return (
@@ -41,25 +40,26 @@ function Blog() {
               {Blog_Data.map((item, index) => {
                 return (
                   <Grid key={index} item md={4} sm={6} xs={12}>
-                    <Zoom cascade>
-                      <Box
-                        sx={{
-                          width: "100%",
-                          minHeight: "470px",
-                          display: "flex",
-                          justifyContent: { md: "start", xs: "center" },
-                          alignItems: { md: "start", xs: "center" },
-                          flexDirection: "column",
-                          borderRight: "1px solid rgb(31,31,34)",
-                          borderLeft: "1px solid rgb(31,31,34)",
-                          p: 4,
-                        }}
-                      >
+                    <Box
+                      sx={{
+                        width: "100%",
+                        minHeight: "470px",
+                        display: "flex",
+                        justifyContent: { md: "start", xs: "center" },
+                        alignItems: { md: "start", xs: "center" },
+                        flexDirection: "column",
+                        borderRight: "1px solid rgb(31,31,34)",
+                        borderLeft: "1px solid rgb(31,31,34)",
+                        p: 4,
+                      }}
+                    >
+                      <Zoom>
                         <Image
                           src={item.icon}
                           width={84}
                           height={84}
                           objectFit="contain"
+                          alt=""
                         />
                         <Typography
                           sx={{
@@ -88,14 +88,13 @@ function Blog() {
                         >
                           {item.des}
                         </Typography>
-                      </Box>
-                    </Zoom>
+                      </Zoom>
+                    </Box>
                   </Grid>
                 );
               })}
               <Grid item xs={12}>
                 <Box
-                  // id="blogBg"
                   sx={{
                     width: "100%",
                     height: { md: "510px", sm: "350px", xs: "510px" },
@@ -106,6 +105,7 @@ function Blog() {
                     justifyContent: "center",
                     alignItems: "center",
                     borderRadius: "1.5rem",
+                    overflow:"hidden"
                   }}
                 >
                   {/* left Box */}
@@ -120,7 +120,7 @@ function Blog() {
                       px: 5,
                     }}
                   >
-                    <Zoom cascade>
+                    <Zoom>
                       <Typography
                         sx={{
                           fontFamily: "Inter",
@@ -176,12 +176,17 @@ function Blog() {
                         height: "100%",
                       }}
                     >
-                      <Image
-                        src={"/Png/BlogDesktop.png"}
-                        layout="fill"
-                        objectFit="fill"
-                        alt=""
-                      />
+                      <Slide
+                        direction="right"
+                        style={{ width: "100%", height: "100%" }}
+                      >
+                        <Image
+                          src={"/Png/BlogDesktop.png"}
+                          layout="fill"
+                          objectFit="fill"
+                          alt=""
+                        />
+                      </Slide>
                     </Box>
                   </Box>
                 </Box>
